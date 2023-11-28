@@ -1,0 +1,23 @@
+{
+  "name": "galihputraa_178_ti1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GalihPutraAdiansyah0702/GalihPutraA_178_TI1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GalihPutraAdiansyah0702/GalihPutraA_178_TI1/issues"
+  },
+  "homepage": "https://github.com/GalihPutraAdiansyah0702/GalihPutraA_178_TI1#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "jquery": "^3.7.1"
+  }
+}
