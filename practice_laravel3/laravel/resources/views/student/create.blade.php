@@ -15,8 +15,9 @@
             <div class="col-md-8 col-xl-6">
                 <h1>Pendaftaran Mahasiswa</h1>
                 <hr>
-                <form action="{{ route('student.store') }}" method="POST"> @csrf <div class="form-group"> <label for="nim">NIM</label> <input
-                            type="text" class="form-control @error('nim') is-invalid @enderror" id="nim" name="nim"
+                <form action="{{ route('student.store') }}" method="POST" enctype="multipart/form-data"> @csrf <div
+                        class="form-group"> <label for="nim">NIM</label> <input type="text"
+                            class="form-control @error('nim') is-invalid @enderror" id="nim" name="nim"
                             value="{{ old('nim') }}"> @error('nim') <div class="text-danger">{{ $message }}</div>
                         @enderror </div>
                     <div class="form-group"> <label for="nama">Nama Lengkap</label> <input type="text"
@@ -48,10 +49,15 @@
                                 Teknik Komputer </option>
                             <option value="Teknik Telekomunikasi" {{ old('jurusan')=='Teknik Telekomunikasi'
                                 ? 'selected' : '' }}> Teknik Telekomunikasi </option>
-                        </select> @error('jurusan') <div class="text-danger">{{ $message }}</div> @enderror </div>
-                    <div class="form-group"> <label for="alamat">Alamat</label> <textarea class="form-control"
-                            id="alamat" rows="3" name="alamat">{{ old('alamat') }}</textarea> </div> <button
-                        type="submit" class="btn btn-primary mb-2">Daftar</button>
+                        </select>
+                        @error('jurusan') <div class="text-danger">{{ $message }}</div> @enderror </div>
+                    <div class="form-group"> <label for="alamat">Alamat</label>
+                        <textarea class="form-control" id="alamat" rows="3" name="alamat">{{ old('alamat') }}</textarea>
+                    </div>
+                    <div class="form-group"> <label for="image">Gambar Profile</label> <input type="file"
+                            class="form-control-file" id="image" name="image"> @error('image') <div class="text-danger">
+                            {{ $message }}</div> @enderror </div>
+                    <button type="submit" class="btn btn-primary mb-2">Daftar</button>
                 </form>
             </div>
         </div>
